@@ -33,12 +33,16 @@ server <- function(input, output) {
     # prints both copies of the message whenever I click "Create Story". When I
     # include this code after the paste(), I see nothing (not even the story)
     # in the applet.
+    # UPDATE: I just had to do a hard refresh of the browser.
 
     paste("Once upon a time, there was a", input$adjective1,
           input$noun1, "who loved to", input$verb1, ".",
           "One day, the", input$adjective1, input$noun1,
           "found a", input$adjective2, input$noun2,
           "and they lived happily ever after.")
+
+    cat("test message 2\n")
+
   })
 
   # Output the story
