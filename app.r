@@ -31,6 +31,10 @@ server <- function(input, output) {
           "and they lived happily ever after.")
   })
 
+  # attempting a logging message:
+  cat("This is a message\n")
+  # When I run the app locally, this message is printed in the Console.
+
   # Output the story
   output$story <- renderText({
     story()

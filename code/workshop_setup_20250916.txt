@@ -25,5 +25,13 @@ rsconnect::writeManifest()
 # Ok, so that absolutely didn't work...
 # Trying something else
 
-# So I need to ignore this note script using an
+# So I need to ignore this note script using an .rscignore file?
+# NOPE that doesn't work either. Use
+rsconnect::listDeploymentFiles("./")
+# to see what files the RStudio connect deployment can see. No matter what I've
+# done in the .rscignore file, these notes still appear.
+
+# New strategy: change the file from .r to .txt so that it can't be executed as
+# R code. Also, for good measure, change the name of the R/ directory.
+# YAY! That worked.
 
