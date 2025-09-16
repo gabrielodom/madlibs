@@ -29,12 +29,14 @@ server <- function(input, output) {
           "One day, the", input$adjective1, input$noun1,
           "found a", input$adjective2, input$noun2,
           "and they lived happily ever after.")
-  })
 
-  # attempting a logging message:
-  cat("This is a message\n")
-  # When I run the app locally, this message is printed in the Console.
-  cat("This is a message\n", file = stderr())
+    # attempting a logging message:
+    cat("This is a message\n")
+    # When I run the app locally, this message is printed in the Console.
+    cat("This is a message\n", file = stderr())
+    # I've just moved these logs into the story() function definition. Now it
+    # prints both copies of the message whenever I click "Create Story".
+  })
 
   # Output the story
   output$story <- renderText({
