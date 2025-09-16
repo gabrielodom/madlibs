@@ -5,3 +5,6 @@
 usethis::use_git()
 usethis::use_github()
 # following work in: https://github.com/hadley/madlibs4
+
+# after committing the basic app, run
+rsconnect::writeManifest()
