@@ -23,5 +23,6 @@ usethis::use_git_remote("origin", url = NULL, overwrite = TRUE)
 rsconnect::writeManifest()
 
 # Ok, so that absolutely didn't work...
+# Trying something else
 
 
