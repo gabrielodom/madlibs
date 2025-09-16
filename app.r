@@ -34,6 +34,7 @@ server <- function(input, output) {
   # attempting a logging message:
   cat("This is a message\n")
   # When I run the app locally, this message is printed in the Console.
+  cat("This is a message\n", file = stderr())
 
   # Output the story
   output$story <- renderText({

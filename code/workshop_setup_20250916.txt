@@ -6,6 +6,9 @@ usethis::use_git()
 usethis::use_github()
 # following work in: https://github.com/hadley/madlibs4
 
+
+######  Setting Up the Shiny App  #############################################
+
 # after committing the basic app, run
 rsconnect::writeManifest()
 
@@ -35,3 +38,6 @@ rsconnect::listDeploymentFiles("./")
 # R code. Also, for good measure, change the name of the R/ directory.
 # YAY! That worked.
 
+
+
+######  Adding Debugging Logs  ################################################
