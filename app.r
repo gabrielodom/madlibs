@@ -24,18 +24,21 @@ server <- function(input, output) {
 
   # Reactive expression to generate the story when the button is pressed
   story <- eventReactive(input$submit, {
-    paste("Once upon a time, there was a", input$adjective1,
-          input$noun1, "who loved to", input$verb1, ".",
-          "One day, the", input$adjective1, input$noun1,
-          "found a", input$adjective2, input$noun2,
-          "and they lived happily ever after.")
 
     # attempting a logging message:
     cat("This is a message\n")
     # When I run the app locally, this message is printed in the Console.
     cat("This is a message\n", file = stderr())
     # I've just moved these logs into the story() function definition. Now it
-    # prints both copies of the message whenever I click "Create Story".
+    # prints both copies of the message whenever I click "Create Story". When I
+    # include this code after the paste(), I see nothing (not even the story)
+    # in the applet.
+
+    paste("Once upon a time, there was a", input$adjective1,
+          input$noun1, "who loved to", input$verb1, ".",
+          "One day, the", input$adjective1, input$noun1,
+          "found a", input$adjective2, input$noun2,
+          "and they lived happily ever after.")
   })
 
   # Output the story
